@@ -10,5 +10,25 @@ banner = r"""
                                                                |___/|_|                            
 """
 print(banner)
+print("""
+    This is an encryption program which uses the standard caesar encryption.
+    Please enter the letter shift of your choice:
+    """)
+
+while True:
+    letter_shift = input()
+    try:
+        letter_shift = int(letter_shift)
+        break
+    except ValueError:
+        print("""
+        ERROR:
+        Enter a number!
+              """)
+        continue
+
+shifting = {
+        
+        }
 
 
