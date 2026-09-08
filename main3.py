@@ -81,7 +81,7 @@ if choice == 1:
 
 
 elif choice == 2:
-    print("\n--- Running Dencryption ---")
+    print("\n--- Running Decryption ---")
     dictionary = {}
     for x in range(97,123):
         digit = chr(x)
