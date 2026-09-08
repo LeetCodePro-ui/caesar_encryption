@@ -65,18 +65,21 @@ if choice == 1:
 
     encrypted_text = ""
     for i in text:
-
-        if i == " ":
-            encrypted_text += " "
-        elif i == "!":
-            encrypted_text += "!"
-        elif i == ".":
-            encrypted_text += "."
-        elif i == ",":
-            encrypted_text += ","
-        else:
-            encrypted_text += dictionary[i]
-
+        try:
+            if i == " ":
+                encrypted_text += " "
+            elif i == "!":
+                encrypted_text += "!"
+            elif i == ".":
+                encrypted_text += "."
+            elif i == ",":
+                encrypted_text += ","
+            elif i == "?":
+                encrypted_text += "?"
+            else:
+                encrypted_text += dictionary[i]
+        except KeyError:
+            continue
     print(f"Encrypted text:\n{encrypted_text}")
 
 
@@ -91,14 +94,19 @@ elif choice == 2:
 
     decrypted_text = ""
     for k in text: 
-        if k == " ":
-            decrypted_text += " "
-        elif k == "!":
-            decrypted_text += "!"
-        elif k == ".":
-            decrypted_text += "."
-        elif k == ",":
-            decrypted_text += ","
-        else:
-            decrypted_text += dictionary[k]
+        try:
+            if k == " ":
+                decrypted_text += " "
+            elif k == "!":
+                decrypted_text += "!"
+            elif k == ".":
+                decrypted_text += "."
+            elif k == ",":
+                decrypted_text += ","
+            elif k == "?":
+                decrypted_text += "?"
+            else:
+                decrypted_text += dictionary[k]
+        except KeyError:
+            continue
     print(f"Decrypted text:\n{decrypted_text}")
